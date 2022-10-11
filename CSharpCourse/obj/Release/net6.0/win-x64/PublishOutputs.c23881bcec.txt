@@ -1,0 +1,5 @@
+C:\Users\bombi\source\repos\CSharpCourse\CSharpCourse\bin\Release\net6.0\publish\win-x64\CSharpCourse.exe
+C:\Users\bombi\source\repos\CSharpCourse\CSharpCourse\bin\Release\net6.0\publish\win-x64\CSharpCourse.dll
+C:\Users\bombi\source\repos\CSharpCourse\CSharpCourse\bin\Release\net6.0\publish\win-x64\CSharpCourse.deps.json
+C:\Users\bombi\source\repos\CSharpCourse\CSharpCourse\bin\Release\net6.0\publish\win-x64\CSharpCourse.runtimeconfig.json
+C:\Users\bombi\source\repos\CSharpCourse\CSharpCourse\bin\Release\net6.0\publish\win-x64\CSharpCourse.pdb
