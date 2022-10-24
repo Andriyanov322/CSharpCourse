@@ -3,8 +3,7 @@ using System.Globalization;
 using System.Text;
 /*Писать комментарии не для того, чтобы показать что происходит в коде, 
   а для того, чтобы объяснить как и почему.
-  Также лучше писать комментарии над кодом,а не справа от него, для лучшей читаемости.
-*/
+  Также лучше писать комментарии над кодом,а не справа от него, для лучшей читаемости.*/
 namespace CSharpCourse
 {
     class Program
@@ -13,6 +12,25 @@ namespace CSharpCourse
         {
 
         }
+        static void MathDemo()
+        {
+            // Возведение 2 в 3 степень
+            Console.WriteLine(Math.Pow(2, 3));
+
+            //Извлечение корня из числа или переменной
+            Console.WriteLine(Math.Sqrt(9));
+            int x = 8;
+            Console.WriteLine(Math.Sqrt(x));
+
+            //Округление (При числе 1.5 без дополнительных условий сокращается в большую сторону
+            Console.WriteLine(Math.Round(1.7));
+            Console.WriteLine(Math.Round(1.4));
+            Console.WriteLine(Math.Round(1.5));
+            //Округление "Подальше от нуля" на выводе будет 2
+            Console.WriteLine(Math.Round(1.5, MidpointRounding.AwayFromZero));
+            //Округление в меньшую сторону
+            Console.WriteLine(Math.Round(1.5, MidpointRounding.ToNegativeInfinity));
+        }//Округление, Возведение в степень, и поиск корня
         static void CastingAndParsing ()
         {
             byte b = 3; //0000 0011 - в бинарном виде
