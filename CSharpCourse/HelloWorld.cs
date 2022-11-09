@@ -10,8 +10,86 @@ namespace CSharpCourse
     {
         static void Main(string[] args)
         {
-
+            HomeWork3();
         }
+        static void HomeWork3()
+        {
+            //Вывод профиля пользователя на экран с ИМТ
+            Console.WriteLine("Введите вашу фамилию: ");
+            string surname = Console.ReadLine();
+            Console.WriteLine("Введите ваше имя: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("Введите ваш розраст: ");
+            string age = Console.ReadLine();
+            Console.WriteLine("Введите ваш вес в килограммах: ");
+            double weight = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите ваш рост в метрах");
+            double height = double.Parse(Console.ReadLine());
+
+            double imt = (weight / (height * height));
+
+            string answer = ($"\nYour Profile: \nFull name: {surname}, {name} \nAge: {age} \nWeight: {weight} \nHeight: {height} \nBody mass Index: {imt}");
+            Console.WriteLine(answer);
+            //Вывод профиля пользователя на экран с ИМТ
+            //Вывод профиля пользователя на экран с ИМТ
+        }//Вывод профиля пользователя на экран с ИМТ
+        static void HomeWork2()
+        {
+            //Формула Герона
+            Console.WriteLine("Введите значение a: ");
+            double a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите значение b: ");
+            double b = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите значение c: ");
+            double c = double.Parse(Console.ReadLine());
+            double p = (a + b + c) / 2;
+            Console.WriteLine($"\nПлощадь треугольника: {Math.Sqrt(p * (p - a) * (p - b) * (p - c))}");
+        }//Формула Герона
+        static void HomeWork1()
+        {
+            //1. Запросить имя пользователя. Вывести Hello, [имя пользователя].
+            Console.Write("Введите ваше имя: ");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Hello, {name}");
+
+            //2.Запросить у пользователя два целых числа и сохранить в двух переменных. Вывести значения.
+            //Обменять значения переменных: например, если в переменной x было записано число 3, а в y число 5, сделать так, чтобы в y стало 3, а в x стало 5.
+            //Вывести значения после обмена.
+            Console.WriteLine("\nВведите два числа: ");
+            string x1 = Console.ReadLine();
+            string x2 = Console.ReadLine();
+            Console.WriteLine($"Введенные значения переменных: {x1}, {x2}.");
+            (x1, x2) = (x2, x1);
+            Console.WriteLine($"Введенные значения переменных: {x1}, {x2}.");
+
+            //3. Запросить у пользователя целое число. Вывести количество цифр числа. Например, в числе 156 - 3 цифры.
+            Console.WriteLine("\nВведите число");
+            int x3 = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Длина числа: {x3.ToString().Length}");
+        }//Первая домашняя работа
+        static void DateTimeDemo()
+        {
+            //Запись в переменную now текущее время  
+            DateTime now = DateTime.Now;
+            Console.WriteLine(now.ToString());
+
+            //Вывод из переменной now порядковый номер сегодняшнего дня и времени суток
+            Console.WriteLine($"It's {now.DayOfYear}, {now.Hour}:{now.Minute}");
+            //Вывод текущего дня недели и месяца
+            Console.WriteLine(now.ToString("ddd, M", CultureInfo.InvariantCulture));
+
+            //Запись в переменную конкретной даты
+            DateTime dt = new DateTime(2015, 2, 28);
+            //Добавление одного дня в дату переменной
+            DateTime newDt = dt.AddDays(1);
+            Console.WriteLine(newDt);
+
+            //Вычитание из одной переменной другой
+            TimeSpan ts = now - dt;
+            //ts = now.Subtract(dt);
+            //Вывод количества дней между двумя датами
+            Console.WriteLine($"{ts.Days} - current day from data");
+        }//Введение в DateTime
         static void IntroToArrays()
         {
             // Объявление массива а потом объявление его дампа памяти
